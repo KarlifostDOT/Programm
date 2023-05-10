@@ -1,0 +1,31 @@
+﻿<Page x:Class="Programm.Views.SignUpPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Programm.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="450"
+      Title="SignUpPage">
+
+    <Grid Background="#F0F0F0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" Background="#FFFFFF" BorderThickness="0,0,0,1">
+            <TextBlock Text="РЕГИСТРАЦИЯ" TextAlignment="Center" VerticalAlignment="Center" />
+        </Border>
+
+        <StackPanel Grid.Row="1" Margin="40" HorizontalAlignment="Center">
+            <TextBlock Text="Введите логин:" />
+            <TextBox x:Name="usernameBox"  />
+
+            <TextBlock Text="Введите пароль:" />
+            <PasswordBox x:Name="passwordBox" />
+            <Button Content="Зарегистрироваться" Click="RegisterButton_Click" Margin="0 20"/>
+            <Button Content="Уже зарегистрированы?" Click="BtnToSignIn_Click"  />
+        </StackPanel>
+    </Grid>
+</Page>
